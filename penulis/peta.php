@@ -1,4 +1,4 @@
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD6850hcJvbBxOw6Cq7o3EDRIT5mbc3qCQ"></script>
 
 <script type="text/javascript">
 
@@ -33,7 +33,7 @@
 
       ?>
 
-    [<?=$data->lat;?>, <?=$data->lon;?>, '<?=$data->nama;?>', '<?=$data->gambar;?>'],
+    [<?=$data->lat;?>, <?=$data->lon;?>, '<?=$data->nama;?>'],
 
     <?php }    ?>        
 
@@ -45,9 +45,9 @@
 
      var options = {
 
-      zoom: 20, //level zoom maps
+      zoom: 10, //level zoom maps
 
-       center: new google.maps.LatLng(-6.914744,107.609810), //kordinat tengah maps
+       center: new google.maps.LatLng(-6.537124, 107.446965), //kordinat tengah maps
 
        mapTypeId: google.maps.MapTypeId.ROADMAP
 
@@ -78,8 +78,8 @@
        position: new google.maps.LatLng(locations[i][0], locations[i][1]),
 
         map: map,
-
-        icon: 'icon.png'
+        animation:google.maps.Animation.BOUNCE,
+        icon: 'markerr.png'
 
        });
       
@@ -90,7 +90,7 @@
 
         return function() {
 
-             infowindow.setContent('<img src="' + locations[i][3] + '" width="80" /><br/><b>' + locations[i][2] + '</b>');
+             infowindow.setContent('<img src="' + locations[i][3] + '" width="50" /><br/><b>' + locations[i][2] + '</b>');
 
             infowindow.open(map, marker);
 
@@ -116,9 +116,9 @@
 
       border:1px solid #000;
 
-       width:700px;
+       width:1100px;
 
-        height:500px;
+        height:595px;
 
  }
 

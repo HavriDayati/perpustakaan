@@ -11,7 +11,7 @@ $query->execute();
 
 <html>
 <head>
-	<title>Daftar Buku Penulis</title>
+	<title>Tambah Penulis</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
   <script type="text/javascript" src="..//js/jquery.js"></script>
   <script type="text/javascript" src=../"js/bootstrap.js"></script>

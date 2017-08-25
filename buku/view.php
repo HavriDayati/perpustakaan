@@ -20,17 +20,17 @@ return $data['nama'];
 
 function getpenulis($id) {
     include('koneksi.php');
-$query = $db->prepare("SELECT * FROM buku WHERE id =$id");
+$query = $db->prepare("SELECT * FROM penulis WHERE id =$id");
 $query->execute();
-$penulis = $query->fetch();
+$data = $query->fetch();
 
-return $penulis['nama'];
+return $data['nama'];
 }
 
 ?>
 <html>
 <head>
-	<title>Daftar Buku</title>
+	<title>view</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
   <script type="text/javascript" src="..//js/jquery.js"></script>
   <script type="text/javascript" src=../"js/bootstrap.js"></script>
@@ -62,6 +62,6 @@ return $penulis['nama'];
 	<tr>
 		<td>Penulis</td>
 		<td>:</td>
-		<td><?php print getpenulis($penulis['id_penulis']);?></td>
+		<td><?php print getpenulis($data['id_penulis']);?></td>
 	</tr>
 </table>

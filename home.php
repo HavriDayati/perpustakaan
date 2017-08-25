@@ -46,6 +46,7 @@ session_start();
                 <ul class="nav navbar-nav">
                   <li><a href="http://localhost/PPI/buku/index.php">Buku</a></li>
                   <li><a href="http://localhost/PPI/peminjaman/index.php">Peminjaman</a></li>
+                  <li><a href="http://localhost/PPI/penerbit/index.php">Penerbit</a></li>
                   <li><a href="http://localhost/PPI/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout </a></li>
                 <?php } ?>
             </div>

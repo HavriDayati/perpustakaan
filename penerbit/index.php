@@ -1,3 +1,4 @@
+<header><title>Penerbit Buku</title></header>
 <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
   <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/jquery.js"></script>
   <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
@@ -36,7 +37,11 @@ $query->execute();
 <h2>Daftar Penerbit</h2>
 </div>
     <div class="panel-body">
+    <?php session_start();
+                if($_SESSION['role'] == 1){ ?>
             <a href="create.php"class="btn btn-primary"><i class="glyphicon glyphicon-plus "></i>Tambah Penerbit</a>
+            <?php } ?>
+            <a class="btn btn-primary" href="maps.php"><i class="glyphicon glyphicon-map-marker"></i> Lihat Maps </a>
 <div>&nbsp;</div>
 <!-- /.box-header -->
         <table class="table table-bordered table-striped">
@@ -44,6 +49,10 @@ $query->execute();
             <tr>
                 <th>No</th>
                 <th>Nama Penerbit</th>
+                <th>Alamat Penerbit</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Tahun Terbit</th>
                 <th>Aksi</th>
             </tr>
             </thead>
@@ -51,7 +60,13 @@ $query->execute();
             <tr>
                 <td style="text-align: center"><?= $i ?></td>
                 <td><?= $value['nama'] ?></td>
+                <td><?= $value['alamat_penerbit'] ?></td>
+                <td><?= $value['latitude'] ?></td>
+                <td><?= $value['longitude'] ?></td>
+                <td><?= $value['tahun_terbit'] ?></td>
                 <td>
+                <?php session_start();
+                if($_SESSION['role'] == 1){ ?>
                     <a href="update.php?id=<?= $value['id']; ?>">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
@@ -61,6 +76,12 @@ $query->execute();
                     <a href="view.php?id=<?= $value['id']; ?>">
                     <span class="glyphicon glyphicon-list "></span>
                     </a>
+
+                    <?php } elseif($_SESSION['role'] == 2){ ?>
+                    <a href="view.php?id=<?= $value['id']; ?>">
+                    <span class="glyphicon glyphicon-list"></span>
+                    </a>
+                    <?php } ?>
                 </td>
             </tr>
             <?php $i++; endforeach; ?>

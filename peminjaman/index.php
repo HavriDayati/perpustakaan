@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('koneksi.php');
 $query = $db->prepare("SELECT * FROM peminjaman");
 $query->execute();
@@ -24,8 +23,6 @@ return $data['nama'];
 
 ?>
 
-<html>
-<head>
 <title>Daftar Peminjam</title>
 <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
   <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/jquery.js"></script>

@@ -12,7 +12,7 @@ $data = $query->fetch();
 ?>
 <html>
 <head>
-	<title>Daftar Buku Penerbit</title>
+	<title>View Penerbit</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
   <script type="text/javascript" src="..//js/jquery.js"></script>
   <script type="text/javascript" src=../"js/bootstrap.js"></script>

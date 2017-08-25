@@ -22,7 +22,7 @@ $penulis = $query->fetchAll();
 
 <html>
 <head>
-	<title>Daftar Buku</title>
+	<title>Update Buku</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
   <script type="text/javascript" src="..//js/jquery.js"></script>
   <script type="text/javascript" src=../"js/bootstrap.js"></script>
@@ -34,15 +34,16 @@ $penulis = $query->fetchAll();
 			<div class="page-header">
 			<div class="panel panel-primary">
 			 <div class="panel-heading"><h2>UPDATE BUKU</h2></div>
-			 <form enctype="multipart/form-data" action="aksi_create.php" method="POST">
 </div>
 
 <form enctype="multipart/form-data" action="aksi_update.php?id=<?php print $id; ?>" method="POST">
 	<table class="table table-border">
+	<thead>
+	<tbody>
 		<tr>
 			<td>Nama Buku</td>
 			<td>:</td>
-			<td><input class="form-control" name="nama" value="<?= $data['nama']; ?>"></td>
+			<td><input class="form-control" type="text" name="nama" value="<?= $data['nama']; ?>"></td>
 		</tr>
 		<tr>
 			<td>Jenis Buku</td>

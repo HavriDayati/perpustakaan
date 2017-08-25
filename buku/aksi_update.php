@@ -20,10 +20,11 @@ $direktori   = "cover/$nama_file";
 $id_penulis = $_POST['id_penulis'];
 print $lokasi_file;
 
-if { $nama_file=$data['cover'] (!empty($lokasi_file)) 
-} else {
-
+if (!empty($lokasi_file)) {
 	move_uploaded_file($lokasi_file, $direktori);
+} else {
+	$nama_file=$data['cover'];
+	
 }
 
 print $nama.'<br>';

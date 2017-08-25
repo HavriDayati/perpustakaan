@@ -11,7 +11,7 @@ $query->execute();
 
 <html>
 <head>
-	<title>Daftar Penulis</title>
+	<title>Tambah Penulis</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
   <script type="text/javascript" src="..//js/jquery.js"></script>
   <script type="text/javascript" src=../"js/bootstrap.js"></script>
@@ -33,6 +33,26 @@ $query->execute();
 			<td>Nama Penerbit</td>
 			<td>:</td>
 			<td><input class="form-control" type="text" name="nama"></td>
+		</tr>
+		<tr>
+			<td>Alamat Penerbit</td>
+			<td>:</td>
+			<td><input class="form-control" type="text" name="alamat_penerbit"></td>
+		</tr>
+		<tr>
+			<td>Latitude</td>
+			<td>:</td>
+			<td><input class="form-control" type="text" name="latitude"></td>
+		</tr>
+		<tr>
+			<td>Longitude</td>
+			<td>:</td>
+			<td><input class="form-control" type="text" name="longitude"></td>
+		</tr>
+		<tr>
+			<td>Tahun Terbit</td>
+			<td>:</td>
+			<td><input class="form-control" type="text" name="tahun_terbit"></td>
 		</tr>
 		<tr>
 			

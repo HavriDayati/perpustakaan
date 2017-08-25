@@ -12,7 +12,7 @@ $data = $query->fetch();
 ?>
 <html>
 <head>
-	<title>Daftar Buku Penulis</title>
+	<title>View Penulis</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
   <script type="text/javascript" src="..//js/jquery.js"></script>
   <script type="text/javascript" src=../"js/bootstrap.js"></script>
@@ -42,3 +42,4 @@ $data = $query->fetch();
 		<td><?php print $data['alamat']; ?></td>
 	</tr>
 </table>
+

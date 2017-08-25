@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
   <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/jquery.js"></script>
   <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
@@ -16,7 +17,7 @@ $penulis = $query->fetchAll();
 
 <html>
 <head>
-	<title>Daftar Buku</title>
+	<title>Tambah Buku</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
   <script type="text/javascript" src="..//js/jquery.js"></script>
   <script type="text/javascript" src=../"js/bootstrap.js"></script>
